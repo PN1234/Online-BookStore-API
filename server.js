@@ -6,17 +6,13 @@ const Bookroute = require('./routes/Bookroute');
 app.use(bodyparser.json());
 const db = require('./db');
 
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 app.use('/person',Userroute);
 app.use('/book',Bookroute);
 
 
 
-
-
-
-
-app.listen(PORT,function(){
+app.listen(port,function(){
 	console.log("Server is listening on port 3000");
 });
